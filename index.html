@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My 3D Model Test</title>
+    <title>My Web-AR Test</title>
 
     <!-- This script loads the <model-viewer> library -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
-    <!-- This helps ensure the model loads smoothly -->
     <style>
       model-viewer {
         background-color: #eee;
@@ -16,16 +15,21 @@
     </style>
 </head>
 <body>
-    <h1>My 3D Model Test</h1>
-    <p>Below you should see a 3D model of an astronaut.</p>
+    <h1>My Web-AR Test</h1>
+    <p>View this page on a mobile phone to see the AR button!</p>
 
-    <!-- Your updated 3D model viewer -->
+    <!--
+      The 'ar' attribute enables the AR button.
+      The 'ar-modes' attribute specifies which types of AR to support.
+      "webxr" is for modern Android.
+      "quick-look" is for iOS.
+    -->
     <model-viewer
         src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
         ios-src="https://ronenroz.github.io/pupe/models/flat_shirt_size__LL.usdz"
         alt="A 3D model of an astronaut"
         ar
-        ar-modes="quick-look"
+        ar-modes="webxr quick-look"
         camera-controls
         auto-rotate
         poster="https://modelviewer.dev/shared-assets/models/poster-astronaut.webp"
