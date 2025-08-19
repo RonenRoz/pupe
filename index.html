@@ -1,7 +1,32 @@
-<model-viewer src="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz"
-              ios-src="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz"
-              alt="Teapot"
-              ar ar-modes="quick-look"
-              auto-rotate camera-controls
-              style="width:100%; height:500px;">
-</model-viewer>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AR Test - Teapot</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+      }
+      model-viewer {
+        width: 100%;
+        height: 80vh;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer 
+      src="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz"
+      ios-src="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz"
+      alt="Teapot"
+      ar ar-modes="quick-look"
+      auto-rotate 
+      camera-controls>
+    </model-viewer>
+  </body>
+</html>
